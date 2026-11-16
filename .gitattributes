@@ -1,0 +1,5 @@
+* text=auto eol=lf
+
+# Golden fixtures are compared by SHA-256. Keep their exact bytes on every OS.
+fixtures/** -text
+*.wav binary
