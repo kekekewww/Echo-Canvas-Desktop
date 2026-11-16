@@ -1,0 +1,71 @@
+/* Placeholder tokens for the M0 shell. The design system from docs/spec/09-ux-redesign.md
+   replaces this file in M5a. */
+:root {
+  color-scheme: light dark;
+  --color-bg: #f6f7f9;
+  --color-text: #17202b;
+  --color-text-muted: #4a5563;
+  --color-danger: #b42318;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #11161d;
+    --color-text: #e8ecf1;
+    --color-text-muted: #a3adba;
+    --color-danger: #ff8a7a;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.app-shell {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.app-version {
+  margin: 0;
+  font-size: 16px;
+}
+
+.app-meta {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.app-error {
+  margin: 0;
+  color: var(--color-danger);
+}
