@@ -1,0 +1,49 @@
+[workspace]
+resolver = "3"
+members = [
+  "crates/ec-acoustics",
+  "crates/ec-domain",
+  "crates/ec-runtime",
+  "crates/ec-audio",
+  "crates/ec-assets",
+  "crates/ec-ai",
+  "crates/ec-parity",
+  "apps/desktop/src-tauri",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.100"
+publish = false
+# No `license` field yet: the repository license is owner decision D1 (docs/spec/00-README.md).
+
+[workspace.dependencies]
+# JS-compatible JSON: insertion order (JSON.stringify key order) and correctly rounded floats.
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = { version = "1.0.150", features = ["preserve_order", "float_roundtrip"] }
+# Formats f64 exactly like ECMAScript Number.prototype.toString.
+ryu-js = "1.0.2"
+sha2 = "0.11.0"
+clap = { version = "4.6.0", features = ["derive"] }
+tempfile = "3.23.0"
+
+tauri = { version = "2.12.0", features = ["specta"] }
+tauri-build = { version = "2.7.4", features = [] }
+# Pre-release crates are pinned exactly: their semver does not promise compatibility.
+specta = { version = "=2.0.0-rc.28", features = ["derive"] }
+specta-typescript = "=0.0.15"
+tauri-specta = { version = "=2.0.0-rc.29", features = ["derive"] }
+
+[workspace.lints.rust]
+unsafe_code = "deny"
+
+[workspace.lints.clippy]
+dbg_macro = "deny"
+todo = "deny"
+
+[profile.release]
+lto = true
+codegen-units = 1
+# The runtime recovers from shard panics with catch_unwind (docs/spec/08 §3 rule 4), which needs unwinding.
+panic = "unwind"

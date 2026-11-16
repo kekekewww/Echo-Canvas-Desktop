@@ -1,0 +1,20 @@
+{
+  "name": "echo-canvas-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.28.12",
+  "engines": {
+    "node": "^22.22.2"
+  },
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "lint": "pnpm -C apps/desktop/ui lint",
+    "typecheck": "pnpm -C apps/desktop/ui typecheck",
+    "test": "pnpm -C apps/desktop/ui test"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.0"
+  }
+}

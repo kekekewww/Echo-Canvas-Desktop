@@ -1,0 +1,18 @@
+# Rust
+/target/
+
+# Node
+node_modules/
+apps/desktop/ui/dist/
+apps/desktop/ui/coverage/
+
+# Tauri generated schemas and build output
+apps/desktop/src-tauri/gen/
+
+# Corpus run outputs
+/.corpus-runs/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.log

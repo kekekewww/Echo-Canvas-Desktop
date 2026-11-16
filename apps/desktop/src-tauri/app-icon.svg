@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Echo Canvas app icon: a source with three wavefronts. Original asset for this repository. -->
+  <rect x="64" y="64" width="896" height="896" rx="200" fill="#14213d"/>
+  <circle cx="352" cy="512" r="72" fill="#fca311"/>
+  <g fill="none" stroke="#e5e5e5" stroke-linecap="round" stroke-width="48">
+    <path d="M 467.7 374.1 A 180 180 0 0 1 467.7 649.9"/>
+    <path d="M 544.8 282.2 A 300 300 0 0 1 544.8 741.8" stroke-opacity="0.7"/>
+    <path d="M 622.0 190.3 A 420 420 0 0 1 622.0 833.7" stroke-opacity="0.4"/>
+  </g>
+</svg>
