@@ -1,0 +1,12 @@
+[package]
+name = "ec-assets"
+description = "Echo Canvas audio assets: built-in loops, user library, decoding, resampling and relink."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+
+[lints]
+workspace = true

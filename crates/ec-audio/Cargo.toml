@@ -1,0 +1,12 @@
+[package]
+name = "ec-audio"
+description = "Echo Canvas native DSP graph, parameter mapping and device I/O."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+
+[lints]
+workspace = true
